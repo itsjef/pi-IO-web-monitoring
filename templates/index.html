@@ -2,16 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <script src="{{ url_for('static', filename='js/lib/jquery-2.1.4.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/lib/bootstrap.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/lib/socket.io-1.3.7.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/app.js')}}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/lib/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/stylesheet.css')}}">
     <title></title>
 </head>
 <body>
-    <h1>Hello World</h1>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.7/socket.io.min.js"></script>
+    <a href="on" id='on' class="my-button">ON</a>
+    <a href="off" id='off' class="my-button">OFF</a>
+
     <script type="text/javascript" charset="utf-8">
         var socket = io.connect('http://' + document.domain + ':' + location.port);
-        socket.on('connect', function() {
-            socket.emit('my event', {data: 'I\'m connected!'});
-        });
 </script>
 </body>
 </html>
