@@ -4,3 +4,4 @@ Werkzeug==0.11.2
 Flask-SocketIO
 eventlet==0.17.4
 py-notify
+RPi.GPIO
